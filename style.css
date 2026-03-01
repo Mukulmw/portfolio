@@ -31,7 +31,7 @@ nav {
 
 .logo {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: -1px;
 }
 
@@ -54,7 +54,7 @@ nav a:hover { color: var(--accent-red); }
 /* Hero Section */
 #hero { padding: 100px 0; }
 
-h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+h1 { font-size: 2rem; line-height: 1.1; margin-bottom: 20px; }
 
 #hero p { font-size: 1.2rem; color: var(--grey-medium); max-width: 500px; }
 
@@ -93,4 +93,85 @@ footer {
     font-size: 0.8rem;
     color: var(--grey-medium);
     border-top: 1px solid var(--grey-light);
+}
+/* Contact Section Layout */
+#contact {
+    padding: 100px 0;
+    border-top: 1px solid var(--grey-light);
+    max-width: 600px; /* Centers the form and keeps it readable */
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: var(--grey-medium);
+    margin-bottom: 40px;
+}
+
+/* Form Element Styling */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between inputs */
+}
+
+/* Targets all text inputs and the message box */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--grey-light); /* Light grey border */
+    background-color: var(--bg-white);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Subtle placeholder color */
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: var(--grey-medium);
+    opacity: 0.6;
+}
+
+/* Red accent border when user clicks into a field */
+#contact input:focus,
+#contact textarea:focus {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 5px rgba(230, 57, 70, 0.1); /* Very soft red glow */
+}
+
+/* Textarea height */
+#contact textarea {
+    min-height: 150px;
+    resize: vertical; /* Allows user to grow the box vertically only */
+}
+
+/* Submit Button Styling */
+#contact button[type="submit"] {
+    background-color: var(--text-black);
+    color: var(--bg-white);
+    padding: 18px 30px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-self: flex-start; /* Keeps button from stretching full width */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state turns the button Red */
+#contact button[type="submit"]:hover {
+    background-color: var(--accent-red);
+}
+
+/* Now, anything with the class "dot" will be red, regardless of where it is */
+.dot {
+    color: var(--accent-red);
 }
